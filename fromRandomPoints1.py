@@ -17,7 +17,8 @@ import time
 
 class pi_calculator():
 
-    def __init__(self):
+    def __init__(self, seed='Pi!'):
+        random.seed(seed)
         self.points_in_circle = 0
         self.cnt_points_total = 0
         self.pi = 0
@@ -73,10 +74,6 @@ class pi_calculator():
 
 
 
-
-
-
 if __name__ == '__main__':
     instance = pi_calculator()
-    instance.run_for_n_sec(60)
-    # instance.run_for_n_iter(5000000)
+    instance.run_for_n_iter(100)
